@@ -1,0 +1,743 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context="com.dlt.dltexported.todolist.TodoListactivity">
+
+        <RelativeLayout
+            android:id="@+id/todolist_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:background="@color/actionbar_bg">
+
+            <ImageView
+                android:id="@+id/img_menu"
+                android:layout_width="45dp"
+                android:layout_height="fill_parent"
+                android:padding="12dp"
+                android:src="@mipmap/burger_menu" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true">
+
+                <ImageView
+                    android:layout_width="45dp"
+                    android:layout_height="fill_parent"
+                    android:scaleType="centerCrop"
+                    android:src="@mipmap/splash_heart" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Daily Life Tracker"
+                        android:textColor="@color/white"
+                        android:textSize="17sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="52dp"
+                        android:text="Balanced Lifestyle"
+                        android:textColor="@color/white"
+                        android:textSize="10sp" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/img_help"
+                android:layout_width="45dp"
+                android:layout_height="fill_parent"
+                android:layout_alignParentRight="true"
+                android:padding="12dp"
+                android:src="@mipmap/help_icon" />
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/todolist_toolbar"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="To-Do List"
+                android:textColor="@color/colorPrimary"
+                android:textSize="18sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/iv_todo_add"
+                    android:layout_width="0dp"
+                    android:layout_height="50dp"
+                    android:layout_weight="0.2"
+                    android:src="@drawable/todolist_icon_plus" />
+
+                <ImageView
+                    android:id="@+id/iv_todo_delete"
+                    android:layout_width="0dp"
+                    android:layout_height="50dp"
+                    android:layout_weight="0.2"
+                    android:src="@drawable/todolist_icon_delete" />
+
+                <ImageView
+                    android:id="@+id/iv_todo_print"
+                    android:layout_width="0dp"
+                    android:layout_height="50dp"
+                    android:layout_weight="0.2"
+                    android:src="@drawable/todolist_icon_print" />
+
+                <ImageView
+                    android:id="@+id/iv_todo_context_menu"
+                    android:layout_width="0dp"
+                    android:layout_height="50dp"
+                    android:layout_weight="0.2"
+                    android:src="@drawable/todolist_icon_list" />
+
+                <ImageView
+                    android:id="@+id/iv_todo_master"
+                    android:layout_width="0dp"
+                    android:layout_height="50dp"
+                    android:layout_weight="0.2"
+                    android:src="@drawable/todolist_icon_master" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_context_menu_main"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:id="@+id/rl_context_menu"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@color/todolist_blue">
+
+                    <ImageView
+                        android:id="@+id/iv_context"
+                        android:layout_width="30dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="5dp"
+                        android:padding="5dp"
+                        android:src="@mipmap/burger_menu" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="5dp"
+                        android:layout_toRightOf="@+id/iv_context"
+                        android:gravity="center"
+                        android:text="Context Menu"
+                        android:textColor="@color/White"
+                        android:textSize="14sp" />
+
+                    <ImageView
+                        android:id="@+id/iv_context_updownarrow"
+                        android:layout_width="25dp"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="5dp"
+                        android:padding="8dp"
+                        android:src="@drawable/whitearrow_down" />
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_context_menu"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="5dp"
+                        android:gravity="center"
+                        android:text="Event"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="16sp" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginTop="5dp"
+                        android:background="#e9e9e9"></View>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp">
+
+                        <RadioButton
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="30dp"
+                            android:text="Chemistry Lab" />
+
+                        <ImageView
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginRight="10dp"
+                            android:src="@drawable/todolist_icon_edit" />
+                    </RelativeLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginTop="10dp"
+                        android:background="#e9e9e9"></View>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="5dp"
+                        android:gravity="center"
+                        android:text="Goal"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="16sp" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginTop="5dp"
+                        android:background="#e9e9e9"></View>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp">
+
+                        <RadioButton
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="30dp"
+                            android:text="Study 3 Hour" />
+
+                        <ImageView
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginRight="10dp"
+                            android:src="@drawable/todolist_icon_edit" />
+                    </RelativeLayout>
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_master_list"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/todolist_blue">
+
+                <ImageView
+                    android:id="@+id/iv_master"
+                    android:layout_width="40dp"
+                    android:layout_height="match_parent"
+                    android:padding="5dp"
+                    android:src="@drawable/todolist_icon_master_white" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_toRightOf="@+id/iv_master"
+                    android:gravity="center"
+                    android:text="Master List"
+                    android:textColor="@color/White"
+                    android:textSize="14sp" />
+
+                <ImageView
+                    android:id="@+id/iv_updownarrow"
+                    android:layout_width="25dp"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="5dp"
+                    android:padding="8dp"
+                    android:src="@drawable/whitearrow_down" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_master_list"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp">
+
+                    <ImageView
+                        android:id="@+id/iv_greyArrow"
+                        android:layout_width="25dp"
+                        android:layout_height="match_parent"
+                        android:padding="5dp"
+                        android:src="@drawable/gry_arrow" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_toRightOf="@+id/iv_greyArrow"
+                        android:gravity="center"
+                        android:text="Relationships"
+                        android:textColor="#4C4C4C"
+                        android:textSize="14sp" />
+
+                    <ImageView
+                        android:id="@+id/iv_editicon_relation"
+                        android:layout_width="35dp"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="5dp"
+                        android:padding="5dp"
+                        android:src="@drawable/todolist_icon_edit" />
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1.2dp"
+                    android:background="#e9e9e9"></View>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp">
+
+                    <ImageView
+                        android:id="@+id/iv_studyArrow"
+                        android:layout_width="25dp"
+                        android:layout_height="match_parent"
+                        android:padding="5dp"
+                        android:src="@drawable/gry_arrow" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_toRightOf="@+id/iv_studyArrow"
+                        android:gravity="center"
+                        android:text="Studies"
+                        android:textColor="#4C4C4C"
+                        android:textSize="14sp" />
+
+                    <ImageView
+                        android:id="@+id/iv_editicon_study"
+                        android:layout_width="35dp"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="5dp"
+                        android:padding="5dp"
+                        android:src="@drawable/todolist_icon_edit" />
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1.2dp"
+                    android:background="#e9e9e9"></View>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp">
+
+                    <ImageView
+                        android:id="@+id/iv_execersizeArrow"
+                        android:layout_width="25dp"
+                        android:layout_height="match_parent"
+                        android:padding="5dp"
+                        android:src="@drawable/gry_arrow" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_toRightOf="@+id/iv_execersizeArrow"
+                        android:gravity="center"
+                        android:text="Exercise"
+                        android:textColor="#4C4C4C"
+                        android:textSize="14sp" />
+
+                    <ImageView
+                        android:id="@+id/iv_editicon_exercise"
+                        android:layout_width="35dp"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="5dp"
+                        android:padding="5dp"
+                        android:src="@drawable/todolist_icon_edit" />
+                </RelativeLayout>
+            </LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_quickList"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/todolist_violet">
+
+                <ImageView
+                    android:id="@+id/iv_quicklist"
+                    android:layout_width="40dp"
+                    android:layout_height="match_parent"
+                    android:padding="5dp"
+                    android:src="@drawable/todolist_icons_cog" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_toRightOf="@+id/iv_quicklist"
+                    android:gravity="center"
+                    android:text="Quick List Filters"
+                    android:textColor="@color/White"
+                    android:textSize="14sp" />
+
+                <ImageView
+                    android:id="@+id/iv_quicklist_updownarrow"
+                    android:layout_width="25dp"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="5dp"
+                    android:padding="8dp"
+                    android:src="@drawable/whitearrow_down" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_quickList"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="5dp"
+                    android:background="@color/todolist_light_violet">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="20dp"
+                        android:gravity="center"
+                        android:text="Search"
+                        android:textColor="@color/White"
+                        android:textSize="14sp" />
+
+                    <ImageView
+                        android:id="@+id/iv_todo_quick_search"
+                        android:layout_width="30dp"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="10dp"
+                        android:src="@drawable/ic_add_24dp" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="5dp"
+                    android:background="@color/todolist_light_violet">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="20dp"
+                        android:gravity="center"
+                        android:text="Contexts"
+                        android:textColor="@color/White"
+                        android:textSize="14sp" />
+
+                    <ImageView
+                        android:id="@+id/iv_todo_quick_context"
+                        android:layout_width="30dp"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="10dp"
+                        android:src="@drawable/ic_add_24dp" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="5dp"
+                    android:background="@color/todolist_light_violet">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="20dp"
+                        android:gravity="center"
+                        android:text="Timing"
+                        android:textColor="@color/White"
+                        android:textSize="14sp" />
+
+                    <ImageView
+                        android:id="@+id/iv_todo_quick_timing"
+                        android:layout_width="30dp"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="10dp"
+                        android:src="@drawable/ic_add_24dp" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="5dp"
+                    android:background="@color/todolist_light_violet">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="20dp"
+                        android:gravity="center"
+                        android:text="Visibility"
+                        android:textColor="@color/White"
+                        android:textSize="14sp" />
+
+                    <ImageView
+                        android:id="@+id/iv_todo_quick_visibility"
+                        android:layout_width="30dp"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="10dp"
+                        android:src="@drawable/ic_add_24dp" />
+                </RelativeLayout>
+            </LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_task_actiity"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/todolist_purple">
+
+                <ImageView
+                    android:id="@+id/iv_task_activity"
+                    android:layout_width="40dp"
+                    android:layout_height="match_parent"
+                    android:padding="5dp"
+                    android:src="@drawable/todolist_icons_cog" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_toRightOf="@+id/iv_task_activity"
+                    android:gravity="center"
+                    android:text="Task Activity"
+                    android:textColor="@color/White"
+                    android:textSize="14sp" />
+
+                <ImageView
+                    android:id="@+id/iv_task_activity_updownarrow"
+                    android:layout_width="25dp"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="5dp"
+                    android:padding="8dp"
+                    android:src="@drawable/whitearrow_down" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_task_actiity"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="25dp"
+                android:layout_marginRight="25dp"
+                android:layout_marginTop="10dp"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Move Task Timing"
+                    android:textColor="@color/todolist_purple"
+                    android:textSize="14sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.5"
+                        android:gravity="center_vertical"
+                        android:text="From:"
+                        android:textColor="#4C4C4C"
+                        android:textSize="12sp" />
+
+                    <Spinner
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_weight="0.5"></Spinner>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.5"
+                        android:gravity="center_vertical"
+                        android:text="To:"
+                        android:textColor="#4C4C4C"
+                        android:textSize="12sp" />
+
+                    <Spinner
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_weight="0.5"></Spinner>
+                </LinearLayout>
+            </LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_item_app"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/todolist_pink">
+
+                <ImageView
+                    android:id="@+id/iv_item_app"
+                    android:layout_width="40dp"
+                    android:layout_height="match_parent"
+                    android:padding="5dp"
+                    android:src="@drawable/todolist_icons_cog" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_toRightOf="@+id/iv_item_app"
+                    android:gravity="center"
+                    android:text="Item Appearance"
+                    android:textColor="@color/White"
+                    android:textSize="14sp" />
+
+                <ImageView
+                    android:id="@+id/iv_item_app_updownarrow"
+                    android:layout_width="25dp"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="5dp"
+                    android:padding="8dp"
+                    android:src="@drawable/whitearrow_down" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_item_app"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="Formatting"
+                    android:textColor="@color/todolist_pink"
+                    android:textSize="14sp" />
+
+                <RadioGroup
+                    android:id="@+id/rg_templete_select"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Basic"
+                        android:textSize="12sp" />
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Italic"
+                        android:textSize="12sp" />
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Imortant"
+                        android:textSize="12sp" />
+
+                </RadioGroup>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="Text Colour"
+                    android:textColor="#4c4c4c"
+                    android:textSize="14sp" />
+
+                <ImageView
+                    android:id="@+id/img_text_color"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:layout_marginTop="8dp"
+                    android:background="@color/tab_border" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="Background Colour"
+                    android:textColor="#4c4c4c"
+                    android:textSize="14sp" />
+
+                <ImageView
+                    android:id="@+id/img_bg_color"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:layout_marginTop="8dp"
+                    android:background="@color/yellow" />
+            </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+</ScrollView>

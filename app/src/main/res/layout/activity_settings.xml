@@ -1,0 +1,547 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".settings.SettingsActivity">
+
+    <RelativeLayout
+        android:id="@+id/settings_actionBar"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="@color/actionbar_bg">
+
+        <ImageView
+            android:id="@+id/img_menu"
+            android:layout_width="45dp"
+            android:layout_height="fill_parent"
+            android:padding="12dp"
+            android:src="@mipmap/burger_menu" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true">
+
+            <ImageView
+                android:layout_width="45dp"
+                android:layout_height="fill_parent"
+                android:scaleType="centerCrop"
+                android:src="@mipmap/splash_heart" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Daily Life Tracker"
+                    android:textColor="@color/white"
+                    android:textSize="17sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="52dp"
+                    android:text="Balanced Lifestyle"
+                    android:textColor="@color/white"
+                    android:textSize="10sp" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/img_help"
+            android:layout_width="45dp"
+            android:layout_height="fill_parent"
+            android:layout_alignParentRight="true"
+            android:padding="12dp"
+            android:src="@mipmap/help_icon" />
+
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_below="@+id/settings_actionBar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/heading"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="20dp"
+                android:text="Settings"
+                android:textColor="@color/colorPrimary"
+                android:textSize="18sp" />
+
+            <Spinner
+                android:id="@+id/sp_setting_customisation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/heading"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp"></Spinner>
+
+            <LinearLayout
+                android:id="@+id/ll_user_setting"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/sp_setting_customisation"
+                android:layout_marginLeft="25dp"
+                android:layout_marginRight="25dp"
+                android:layout_marginTop="10dp"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:text="Some simple details about you"
+                    android:textColor="#000000"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:text="First Name"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="14sp" />
+
+                <EditText
+                    android:id="@+id/et_settings_first_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:layout_marginTop="5dp"
+                    android:background="#E6E6E6"
+                    android:hint="First Name"
+                    android:paddingLeft="5dp"
+                    android:textColor="#000000"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="Last Name"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="14sp" />
+
+                <EditText
+                    android:id="@+id/et_settings_last_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:layout_marginTop="5dp"
+                    android:background="#E6E6E6"
+                    android:hint="Last Name"
+                    android:paddingLeft="5dp"
+                    android:textColor="#000000"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="Date of Birth"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="14sp" />
+
+                <EditText
+                    android:id="@+id/et_settings_dob"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:layout_marginTop="5dp"
+                    android:background="#E6E6E6"
+                    android:hint="Date of Birth"
+                    android:paddingLeft="5dp"
+                    android:textColor="#000000"
+                    android:textSize="12sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:layout_weight="0.35"
+                        android:text="Gender"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="14sp" />
+
+                    <Spinner
+                        android:id="@+id/sp_settings_gender"
+                        android:layout_width="0dp"
+                        android:layout_height="35dp"
+                        android:layout_weight="0.65"></Spinner>
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="Notification Email Address"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="14sp" />
+
+                <EditText
+                    android:id="@+id/et_settings_email"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:layout_marginTop="5dp"
+                    android:background="#E6E6E6"
+                    android:hint="Email Address"
+                    android:paddingLeft="5dp"
+                    android:textColor="#000000"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="Reset Password"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="14sp" />
+
+                <EditText
+                    android:id="@+id/et_settings_password"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:layout_marginTop="5dp"
+                    android:background="#E6E6E6"
+                    android:hint="Password"
+                    android:inputType="textPassword"
+                    android:paddingLeft="5dp"
+                    android:textColor="#000000"
+                    android:textSize="12sp" />
+
+                <Button
+                    android:id="@+id/btn_settings_save"
+                    android:layout_width="200dp"
+                    android:layout_height="30dp"
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/blue_btn_bg"
+                    android:text="Save and Update"
+                    android:textColor="#ffffff"
+                    android:textSize="12sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_customization"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/sp_setting_customisation"
+                android:layout_marginLeft="25dp"
+                android:layout_marginRight="25dp"
+                android:layout_marginTop="10dp"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:text="Here you may change the theme for your currently active dataset. You can create your own themes as part of the new DataSet wizard."
+                    android:textColor="#000000"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:text="Currently Active Dataset"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="My New Dataset"
+                    android:textColor="#F9901D"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:text="Change Theme"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="14sp" />
+
+                <Spinner
+                    android:id="@+id/sp_setting_change_theme"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:entries="@array/setting_array"></Spinner>
+
+                <Button
+                    android:layout_width="200dp"
+                    android:layout_height="30dp"
+                    android:layout_marginTop="15dp"
+                    android:background="@drawable/blue_btn_bg"
+                    android:text="Edit Theme"
+                    android:textColor="#ffffff"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:text="Your Custom Images"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="14sp" />
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp" />
+
+                <Button
+                    android:layout_width="200dp"
+                    android:layout_height="30dp"
+                    android:layout_marginTop="15dp"
+                    android:background="@drawable/blue_btn_bg"
+                    android:text="Add Custom Image"
+                    android:textColor="#ffffff"
+                    android:textSize="12sp" />
+
+                <Button
+                    android:layout_width="200dp"
+                    android:layout_height="30dp"
+                    android:layout_marginTop="15dp"
+                    android:background="@drawable/blue_btn_bg"
+                    android:text="Save and Update"
+                    android:textColor="#ffffff"
+                    android:textSize="12sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_time_date_setting"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/sp_setting_customisation"
+                android:layout_marginLeft="25dp"
+                android:layout_marginRight="25dp"
+                android:layout_marginTop="10dp"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:visibility="visible">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:text="In some places within the Daily Life Tracker tool the date can be presented in a format that suits you best."
+                    android:textColor="#000000"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:text="Change Date Format"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="14sp" />
+
+                <EditText
+                    android:id="@+id/et_date_format"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:layout_marginTop="5dp"
+                    android:background="#E6E6E6"
+                    android:hint="DD/MM/YYYY"
+                    android:paddingLeft="5dp"
+                    android:textColor="#000000"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="Select Your Time Zone"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="14sp" />
+
+                <EditText
+                    android:id="@+id/et_time_format"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:layout_marginTop="5dp"
+                    android:background="#E6E6E6"
+                    android:hint="(GMT) Western Europe"
+                    android:paddingLeft="5dp"
+                    android:textColor="#000000"
+                    android:textSize="12sp" />
+
+                <Button
+                    android:layout_width="200dp"
+                    android:layout_height="30dp"
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/blue_btn_bg"
+                    android:text="Save and Update"
+                    android:textColor="#ffffff"
+                    android:textSize="12sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_exercise_setting"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/sp_setting_customisation"
+                android:layout_marginLeft="25dp"
+                android:layout_marginRight="25dp"
+                android:layout_marginTop="10dp"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:text="Here You can enter details of your current exercise details."
+                    android:textColor="#000000"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="25dp"
+                    android:text="Aerobic Activity Hours"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="14sp" />
+
+                <EditText
+                    android:id="@+id/et_exercise_hour"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:layout_marginTop="5dp"
+                    android:background="#E6E6E6"
+                    android:paddingLeft="5dp"
+                    android:textColor="#000000"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="Are you new to exercise?"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="14sp" />
+
+                <Spinner
+                    android:id="@+id/sp_exercise_status"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:layout_marginTop="5dp"
+                    android:entries="@array/exercise_spinner"></Spinner>
+
+                <Button
+                    android:layout_width="200dp"
+                    android:layout_height="30dp"
+                    android:layout_marginTop="40dp"
+                    android:background="@drawable/blue_btn_bg"
+                    android:text="Save and Update"
+                    android:textColor="#ffffff"
+                    android:textSize="12sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_dataset_setting"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/sp_setting_customisation"
+                android:layout_marginLeft="25dp"
+                android:layout_marginRight="25dp"
+                android:layout_marginTop="10dp"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:text="Here you can change your active DataSet, delete unwanted DataSets (be careful!) and also start the New DataSet wizard."
+                    android:textColor="#000000"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="Average Data Review"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="14sp" />
+
+                <Spinner
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:layout_marginTop="5dp"
+                    android:entries="@array/week_spinner"></Spinner>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="Change Dataset"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="14sp" />
+
+                <Spinner
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:layout_marginTop="5dp"
+                    android:entries="@array/dataset_spinner"></Spinner>
+
+                <Button
+                    android:layout_width="200dp"
+                    android:layout_height="30dp"
+                    android:layout_marginTop="40dp"
+                    android:background="@drawable/blue_btn_bg"
+                    android:text="Create Dataset"
+                    android:textColor="#ffffff"
+                    android:textSize="12sp" />
+
+                <Button
+                    android:layout_width="200dp"
+                    android:layout_height="30dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/blue_btn_bg"
+                    android:text="Delete Dataset"
+                    android:textColor="#ffffff"
+                    android:textSize="12sp" />
+
+                <Button
+                    android:layout_width="200dp"
+                    android:layout_height="30dp"
+                    android:layout_marginTop="40dp"
+                    android:background="@drawable/blue_btn_bg"
+                    android:text="Save and Update"
+                    android:textColor="#ffffff"
+                    android:textSize="12sp" />
+
+            </LinearLayout>
+        </RelativeLayout>
+    </ScrollView>
+</RelativeLayout>

@@ -1,0 +1,124 @@
+<resources>
+    <string name="app_name">DLT Exported</string>
+
+    <string name="title_section1">Section 1</string>
+    <string name="title_section2">Section 2</string>
+    <string name="title_section3">Section 3</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_example">Example action</string>
+
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_main">MainActivity</string>
+
+    <string name="wizard_title">Dataset Wizard</string>
+    <string name="wizard_text">Welcome to the Daily Life Tracker Dataset Wizard. A Dataset is a collection of data, which
+    includes to do list items, your positive life goals and various other useful things to help you strive towards a more positive life</string>
+    <string name="wizard_small_text">You need at least one Dataset to use the Daily Life Tracker but you can have many of them
+    . Please note, however, that some personal information, such as your weight or other body measurements are stored independently of Datasets.</string>
+
+    <!--choose templete page-->
+    <string name="choose_templete_text">
+        Here you can choose from one of our existing templates (more specialist templates will be available soon), or you can create
+        your own. existing templates come with a preset collection of life categories and positive weekly habits to help guide you in
+        using the DLT. If you are new to DLT perhaps you should choose the "Advanced or Basic" template to get started. you can come back.
+        anytime to create furthur Datasets when you are feeling more confident
+    </string>
+    <string name="custom_theme_setup">Each Dataset can be "Themed", a theme allows you to specify your own target levels for meeting your weekly habit goals.
+    It is also possible to set the colours used to indicate the success level in the action input area. We have create some themes for
+    you to choose from using popular colours. Choose one of the preset themes to save yourself some time.
+    </string>
+
+    <string name="custom_categories_text">An important aid to analyzing and improving your life is to divide up the various aspects of your life into rough groups which you can then focus on. Here in the Daily Life Tracker we call these life aspect groups "Categories". You can create as many or as few (well at least one) as you like. However, 3 to about 6 or 8 generally fits well. Don\'t worry if you are not sure what to call them, you can change the names later.</string>
+    <string name="custom_categories_text_tips">Categories are a way of breaking down your weekly routines into either types of activity or the element of your life you wish to improve. For example you might have a categories called "Financial Mastery", "Exam Preparation", or "Gardening". We have provided space for up to six categories but you can have as many or as few as you like. You can also add sub-categories later on. During the next stages you will add the individual actions (elements of your weekly routine).</string>
+    <!--wizard finish-->
+    <string name="wizard_finish_big_title">Congratulations, you have successfully completed the Dataset wizard.</string>
+    <string name="wizard_finish_small_title">Please note that, unless this is your first Dataset, your new data set will not be active
+    in the DLT until you change your chosen data set in setting page. We hope that, with the help of Daily Life Tracker, you can
+    begin to build up weekly positive habits that will steadily improve your life.</string>
+    <string name="wizard_finish_small_text">Thank you for creating a new Dataset. you can switch to it at any time from within the
+        setting page. Click the finish button below to return to your DLT Homepage.</string>
+    <string name="title_activity_custom_templete">CustomTempleteActivity</string>
+
+    <string name="custome_aspects_text_title">Now you have created some categories it time for you to have a think about which aspects of your life are the most important to you.</string>
+    <string name="custome_aspects_text_body">With each one of your new categories (life area) you will see a "Relative Importance" slider. You can adjust these sliders to a level that you think best describes how important the categories are in relation to one another. In itself, this is often a very useful exercise when starting to look for ways to improve your life. </string>
+
+    <string name="custome_action_text_title">Now that you have set up your categories it is time to add in some weekly goals (positive habits). These weekly goals, or habits, we call Actions.</string>
+    <string name="custome_action_text_body">Click the Edit button next to a category to add/edit the actions within. An action could simply be to walk for 10 minutes every day, or to dine out once a week. If you don\'t want to do this now, just click the next button. You can add actions later. </string>
+    <string-array name="setting_array">
+        <item>User Setting</item>
+        <item>Customisation</item>
+        <item>Time &amp; Date Setting</item>
+        <item>Exercise Settings</item>
+        <item>Dataset Settings</item>
+    </string-array>
+
+    <string-array name="exercise_spinner">
+        <item>Not Specified</item>
+        <item>Yes</item>
+        <item>No</item>
+    </string-array>
+
+    <string-array name="dataset_spinner">
+        <item>My New Dataset</item>
+    </string-array>
+
+    <string-array name="week_spinner">
+        <item>1 Week</item>
+        <item>2 Weeks</item>
+        <item>4 Weeks</item>
+    </string-array>
+
+    <string-array name="body_tracker_spinner">
+        <item>Body Measurements</item>
+        <item>Phisiological Data</item>
+        <item>Additional Heart Rates</item>
+        <item>Your Productivity</item>
+        <item>Calender Option</item>
+    </string-array>
+
+    <string-array name="track_action_list">
+        <item>Aerobic Excercise</item>
+        <item>Drink Water</item>
+        <item>Avoid Dairy</item>
+        <item>Push Ups</item>
+        <item>Avoid Meat</item>
+        <item>Avoid Smoking</item>
+    </string-array>
+
+    <string-array name="spinner_circle">
+        <item>Good</item>
+        <item>Excellent</item>
+        <item>Above Average</item>
+        <item>Below Average</item>
+        <item>Poor</item>
+        <item>Very Poor</item>
+    </string-array>
+
+    <string-array name="body_age_list">
+        <item>18-25 Years</item>
+        <item>26-35 Years</item>
+        <item>36-45 Years</item>
+        <item>46-55 Years</item>
+        <item>56-65 Years</item>
+        <item>65+ Years</item>
+    </string-array>
+
+    <string-array name="track_all_action_list">
+        <item>Spend Time With Family</item>
+        <item>Inspirational Reading</item>
+        <item>Achievement of Weekly Plans</item>
+        <item>Deep Breathing Exercises</item>
+        <item>Drink Water</item>
+        <item>Eat Vegetables</item>
+        <item>Avoid Dairy</item>
+        <item>Push Ups</item>
+        <item>Avoid Meat</item>
+        <item>Avoid Smoking</item>
+    </string-array>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>

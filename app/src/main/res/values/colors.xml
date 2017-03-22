@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="colorPrimary">#0D4775</color>
+    <color name="colorPrimaryDark">#0D4775</color>
+
+    <color name="actionbar_bg">#0D4775</color>
+    <color name="black">#000000</color>
+    <color name="white">#ffffff</color>
+    <color name="app_bg">#F2F2F2</color>
+
+    <color name="red">#EA2131</color>
+    <color name="red_light">#FAB9BD</color>
+    <color name="orange">#F15A25</color>
+    <color name="orange_light">#FEE7DF</color>
+    <color name="yellow">#FA9416</color>
+    <color name="yellow_light">#FCDEBA</color>
+    <color name="green">#8AC43A</color>
+    <color name="green_light">#DCEEC6</color>
+    <color name="blue">#0C6794</color>
+    <color name="blue_light">#DBE9F2</color>
+    <color name="purple">#8D2C95</color>
+    <color name="purple_light">#E8E0EF</color>
+
+    <color name="tab_bg">#EBEBEB</color>
+    <color name="tab_border">#949494</color>
+
+    <!-- Diet Tracker-->
+    <color name="diet_blue">#016798</color>
+    <color name="diet_pink">#ED1E79</color>
+    <color name="diet_purple">#93268F</color>
+    <color name="diet_green">#00A99E</color>
+    <color name="diet_red">#E01E1F</color>
+    <color name="diet_perot">#8AC73E</color>
+    <color name="diet_font_color">#00699F</color>
+
+    <color name="Black">#000000</color>
+    <color name="White">#FFFFFF</color>
+    <color name="Green">#3AB54A</color>
+    <color name="Yellow">#F8931F</color>
+    <color name="Orange">#F15A25</color>
+    <color name="Red">#ED1B24</color>
+
+    <!--To Do List -->
+    <color name="todolist_blue">#016798</color>
+    <color name="todolist_violet">#7F52A5</color>
+    <color name="todolist_light_violet">#B397C8</color>
+    <color name="todolist_purple">#93268F</color>
+    <color name="todolist_pink">#D3145A</color>
+
+    <color name="grey_back">#999999</color>
+    <color name="body_age_head">#652D90</color>
+    <color name="body_age_ratings">#A951A5</color>
+
+</resources>

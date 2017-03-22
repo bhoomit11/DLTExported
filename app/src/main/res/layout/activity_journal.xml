@@ -1,0 +1,564 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/app_bg"
+    android:orientation="vertical"
+    tools:context="com.example.dltexported.Journal.JournalActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="@color/actionbar_bg">
+
+        <ImageView
+            android:id="@+id/img_menu"
+            android:layout_width="45dp"
+            android:layout_height="fill_parent"
+            android:padding="12dp"
+            android:src="@mipmap/burger_menu" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true">
+
+            <ImageView
+                android:layout_width="45dp"
+                android:layout_height="fill_parent"
+                android:scaleType="centerCrop"
+                android:src="@mipmap/splash_heart" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Daily Life Tracker"
+                    android:textColor="@color/white"
+                    android:textSize="17sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="52dp"
+                    android:text="Balanced Lifestyle"
+                    android:textColor="@color/white"
+                    android:textSize="10sp" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/img_help"
+            android:layout_width="45dp"
+            android:layout_height="fill_parent"
+            android:layout_alignParentRight="true"
+            android:padding="12dp"
+            android:src="@mipmap/help_icon" />
+
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <jp.co.recruit_mp.android.lightcalendarview.LightCalendarView
+                android:id="@+id/calendarView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:lcv_accentColor="@drawable/calendar_accent"
+                app:lcv_dayTextSize="14sp"
+                app:lcv_selectionColor="@drawable/calendar_selection"
+                app:lcv_textColor="@drawable/calendar_day_text"
+                app:lcv_firstDayOfWeek="1"
+                android:visibility="gone"
+                app:lcv_weekDayTextSize="14sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:background="@color/white"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+                        android:text="Journal"
+                        android:textColor="@color/actionbar_bg"
+                        android:textSize="17sp"
+                        android:textStyle="bold" />
+
+                    <ImageView
+                        android:id="@+id/img_calendar_view"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_alignParentRight="true"
+                        android:src="@mipmap/diet_calendar" />
+
+                </RelativeLayout>
+
+                <com.imanoweb.calendarview.CustomCalendarView
+                    android:id="@+id/calendar_view_sleep_tracker"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:background="@color/white"
+                    android:visibility="gone"
+                    app:calendarBackgroundColor="@color/white"
+                    app:calendarTitleTextColor="@color/tab_border"
+                    app:currentDayOfMonthColor="@color/tab_border"
+                    app:dayOfMonthTextColor="@color/tab_border"
+                    app:dayOfWeekTextColor="@color/tab_border"
+                    app:disabledDayBackgroundColor="@color/white"
+                    app:disabledDayTextColor="@color/tab_bg"
+                    app:selectedDayBackgroundColor="@color/diet_blue"
+                    app:titleLayoutBackgroundColor="@color/white"
+                    app:weekLayoutBackgroundColor="@color/white" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/app_bg" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:text="New Entry"
+                    android:textColor="@color/actionbar_bg"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_margin="10dp"
+                    android:background="@color/app_bg" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp">
+
+                    <ImageButton
+                        android:id="@+id/ib_bold"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:background="@null"
+                        android:contentDescription="@null"
+                        android:src="@mipmap/bold" />
+
+                    <ImageButton
+                        android:id="@+id/ib_italic"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:background="@null"
+                        android:contentDescription="@null"
+                        android:src="@mipmap/italic" />
+
+                    <ImageButton
+                        android:id="@+id/ib_underline"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:background="@null"
+                        android:contentDescription="@null"
+                        android:src="@mipmap/uderline" />
+
+                    <ImageButton
+                        android:id="@+id/ib_strikethrough"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:background="@null"
+                        android:contentDescription="@null"
+                        android:src="@mipmap/strikethrough" />
+
+                    <ImageButton
+                        android:id="@+id/ib_superscript"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:background="@null"
+                        android:contentDescription="@null"
+                        android:src="@mipmap/superscript" />
+
+                    <ImageButton
+                        android:id="@+id/ib_subscript"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:background="@null"
+                        android:contentDescription="@null"
+                        android:src="@mipmap/subscript" />
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_margin="10dp"
+                    android:background="@color/app_bg" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:weightSum="11">
+
+                    <ImageButton
+                        android:layout_width="0dp"
+                        android:layout_height="fill_parent"
+                        android:layout_weight="1"
+                        android:background="@null"
+                        android:contentDescription="@null"
+                        android:src="@mipmap/journalicons_left" />
+
+                    <ImageButton
+                        android:layout_width="0dp"
+                        android:layout_height="fill_parent"
+                        android:layout_weight="1"
+                        android:background="@null"
+                        android:contentDescription="@null"
+                        android:src="@mipmap/journalicons_centre" />
+
+                    <ImageButton
+                        android:layout_width="0dp"
+                        android:layout_height="fill_parent"
+                        android:layout_weight="1"
+                        android:background="@null"
+                        android:contentDescription="@null"
+                        android:src="@mipmap/journalicons_right" />
+
+                    <ImageButton
+                        android:layout_width="0dp"
+                        android:layout_height="fill_parent"
+                        android:layout_weight="1"
+                        android:background="@null"
+                        android:contentDescription="@null"
+                        android:src="@mipmap/journalicons_typesize" />
+
+                    <ImageButton
+                        android:layout_width="0dp"
+                        android:layout_height="fill_parent"
+                        android:layout_weight="1"
+                        android:background="@null"
+                        android:contentDescription="@null"
+                        android:src="@mipmap/journalicons_colour" />
+
+                    <ImageButton
+                        android:layout_width="0dp"
+                        android:layout_height="fill_parent"
+                        android:layout_weight="1"
+                        android:background="@null"
+                        android:contentDescription="@null"
+                        android:src="@mipmap/journalicons_bullets" />
+
+                    <ImageButton
+                        android:layout_width="0dp"
+                        android:layout_height="fill_parent"
+                        android:layout_weight="1"
+                        android:background="@null"
+                        android:contentDescription="@null"
+                        android:src="@mipmap/journalicons_numbered_list" />
+
+                    <ImageButton
+                        android:layout_width="0dp"
+                        android:layout_height="fill_parent"
+                        android:layout_weight="1"
+                        android:background="@null"
+                        android:contentDescription="@null"
+                        android:src="@mipmap/journalicons_brackets" />
+
+                    <ImageButton
+                        android:layout_width="0dp"
+                        android:layout_height="fill_parent"
+                        android:layout_weight="1"
+                        android:background="@null"
+                        android:contentDescription="@null"
+                        android:src="@mipmap/journalicons_leading" />
+
+                    <ImageButton
+                        android:layout_width="0dp"
+                        android:layout_height="fill_parent"
+                        android:layout_weight="1"
+                        android:background="@null"
+                        android:contentDescription="@null"
+                        android:src="@mipmap/journalicons_link" />
+
+                    <ImageButton
+                        android:layout_width="0dp"
+                        android:layout_height="fill_parent"
+                        android:layout_weight="1"
+                        android:background="@null"
+                        android:contentDescription="@null"
+                        android:src="@mipmap/journalicons_brokenlink" />
+
+                </LinearLayout>
+
+                <jp.wasabeef.richeditor.RichEditor
+                    android:id="@+id/editor_journal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:background="@color/tab_bg" />
+
+                <Button
+                    android:id="@+id/btn_my_food"
+                    android:layout_width="150dp"
+                    android:layout_height="32dp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginTop="15dp"
+                    android:background="@drawable/blue_btn_bg"
+                    android:text="Save Entry"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    android:textSize="14sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:background="@color/white"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:text="Earlier Entries"
+                    android:textColor="@color/actionbar_bg"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@color/app_bg" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="15dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="FRI 22nd JULY 2016 - 15:11:36"
+                        android:textColor="@color/actionbar_bg"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="left"
+                        android:layout_marginTop="3dp"
+                        android:text="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."
+                        android:textColor="@color/tab_border"
+                        android:textSize="12sp" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginBottom="12dp"
+                        android:layout_marginTop="12dp"
+                        android:background="@color/app_bg" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="FRI 22nd JULY 2016 - 15:11:36"
+                        android:textColor="@color/actionbar_bg"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="left"
+                        android:layout_marginTop="3dp"
+                        android:text="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."
+                        android:textColor="@color/tab_border"
+                        android:textSize="12sp" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:background="@color/white"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:text="My Achieved Tasks"
+                    android:textColor="@color/actionbar_bg"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@color/app_bg" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp"
+                    android:background="@color/white"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="35dp"
+                            android:layout_height="35dp"
+                            android:src="@mipmap/journalicons_completed_task" />
+
+                        <LinearLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="8dp"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="SHOP FOR NEW GRILL"
+                                android:textColor="@color/actionbar_bg"
+                                android:textSize="14sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="left"
+                                android:layout_marginTop="1dp"
+                                android:text="Completed at 09:21:02 on 22/07/2016"
+                                android:textColor="@color/tab_border"
+                                android:textSize="12sp" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="35dp"
+                            android:layout_height="35dp"
+                            android:src="@mipmap/journalicons_completed_task" />
+
+                        <LinearLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="8dp"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="RAN 2 MILES"
+                                android:textColor="@color/actionbar_bg"
+                                android:textSize="14sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="left"
+                                android:layout_marginTop="1dp"
+                                android:text="Completed at 09:21:02 on 22/07/2016"
+                                android:textColor="@color/tab_border"
+                                android:textSize="12sp" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:background="@color/white"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:text="Additional Information"
+                    android:textColor="@color/actionbar_bg"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@color/app_bg" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left"
+                    android:layout_margin="15dp"
+                    android:text="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."
+                    android:textColor="@color/tab_border"
+                    android:textSize="12sp" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>
+
